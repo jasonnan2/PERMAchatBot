@@ -148,7 +148,7 @@ if st.sidebar.button("Build ChatBot"):
         jsonData = json.load(f)
 
     roleHeader = f"""You are a health coach helping me with {st.session_state.domain}. I want to minimize depressed mood.
-    This is some EMA data that summarizes my lifestyle and how it relates to my mood. Focus on these variables when giving suggestings: 
+    This is some EMA data that summarizes my lifestyle and how it relates to my mood. Focus on these variables when giving suggestions: 
     {st.session_state.actionableVars[domain]} : {jsonData}
     """
 
@@ -163,7 +163,20 @@ if st.sidebar.button("Build ChatBot"):
     if domain is None:
         st.info("Please select a coach specialty and build chatbot.")
     else:
-        st.success("ChatBot Ready!")
+
+        st.session_state.messages.append({"role": "user", "content": "Hello"})
+        with st.chat_message("user"):
+            st.markdown("Hello")
+            
+        # Get response
+        response = st.session_state.chat_obj.send_message("Hello")
+        reply = response.text
+
+        # Save assistant reply
+        st.session_state.messages.append({"role": "assistant", "content": reply})
+        with st.chat_message("assistant"):
+            st.markdown(reply)
+        # st.success("ChatBot Ready!")
 
 # Display current  conversation history
 displayChat()
