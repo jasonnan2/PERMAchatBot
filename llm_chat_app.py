@@ -163,17 +163,12 @@ if st.sidebar.button("Build ChatBot"):
     if domain is None:
         st.info("Please select a coach specialty and build chatbot.")
     else:
-
-        st.session_state.messages.append({"role": "user", "content": "Hello"})
-        with st.chat_message("user"):
-            st.markdown("Hello")
             
         # Get response
         response = st.session_state.chat_obj.send_message("Hello")
         reply = response.text
 
         # Save assistant reply
-        st.session_state.messages.append({"role": "assistant", "content": reply})
         with st.chat_message("assistant"):
             st.markdown(reply)
         # st.success("ChatBot Ready!")
