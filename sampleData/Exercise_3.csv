@@ -1,0 +1,17 @@
+,rank,level_0,level_1,high Depression,low Depression
+0,3.0,past_day_exercise_mild,MEAN,0.721,1.326
+1,,Hrs,CORR,-0.2879188029068069,-0.2879188029068069
+2,,,STD,0.813,1.445
+3,,,CI95,0.433 - 1.009,0.805 - 1.846
+4,9.0,Exercise_satisfaction,MEAN,1.735,2.000
+5,,Score 1-5,CORR,-0.2331695772142946,-0.2331695772142946
+6,,,STD,0.740,0.921
+7,,,CI95,1.473 - 1.997,1.668 - 2.332
+8,,past_day_exercise_moderate,MEAN,0.000,0.000
+9,,Hrs,CORR,-0.0546098938278254,-0.0546098938278254
+10,,,STD,0.000,0.000
+11,,,CI95,nan - nan,nan - nan
+12,,past_day_exercise_strenuous,MEAN,0.000,0.000
+13,,Hrs,CORR,-0.0546098938278254,-0.0546098938278254
+14,,,STD,0.000,0.000
+15,,,CI95,nan - nan,nan - nan
