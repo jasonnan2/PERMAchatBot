@@ -1,5 +1,6 @@
 # PERMA Health Coach Bot
 App Link https://permachatbot-9n3jgzrgr5lvccazvxydaw.streamlit.app/
+<img width="3794" height="1889" alt="image" src="https://github.com/user-attachments/assets/0a59742c-e015-416f-a16f-6b008573fcbb" />
 
 # Chatbot Overview
 
