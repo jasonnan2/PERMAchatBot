@@ -7,16 +7,27 @@ import os
 import json
 import pandas as pd
 
+# Initialize Gemini client
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 # Page configuration
 st.set_page_config(page_title="PERMA Coach Chatbot", page_icon="🤖")
 st.title("🤖 PERMA Coach Chatbot")
 
-# Initialize Gemini client
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-
 # Sidebar: Options
 st.sidebar.header("LLM Role and Settings")
-
+# Inject custom CSS to make the modal bigger
+st.markdown(
+    """
+    <style>
+    /* Target modal container */
+    .stModal > div[data-testid="stModalDialog"] {
+        width: 90% !important;       /* Make modal wider */
+        max-width: 1200px !important; /* Optional max width */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # ---------------------------
 # Helpers
 # ---------------------------
