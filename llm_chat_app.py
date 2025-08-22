@@ -9,6 +9,7 @@ import pandas as pd
 
 # Initialize Gemini client
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+
 # Page configuration
 st.set_page_config(page_title="PERMA Coach Chatbot", page_icon="🤖")
 st.title("🤖 PERMA Coach Chatbot")
@@ -128,8 +129,9 @@ if view_button:
 if modal.is_open():
     with modal.container():
         st.dataframe(st.session_state["data_df"])
-        
-new_role = st.sidebar.text_area("Define LLM Role", value=st.session_state.role_definition, height=160,on_change=mark_dirty,)
+
+new_role = st.sidebar.text_area("Define LLM Role  [View Templates](https://drive.google.com/drive/folders/1347mfrk8I5lXNhOr68IAEMrN4NO0J7jS?usp=sharing)", 
+                                value=st.session_state.role_definition, height=160,on_change=mark_dirty, )
 new_temperature = st.sidebar.slider("Temperature (Creativity)", 0.0, 1.0, st.session_state.temperature, 0.1,on_change=mark_dirty,)
 
 # Button to apply settings
@@ -162,8 +164,6 @@ if st.sidebar.button("Build ChatBot"):
         st.info("Please select a coach specialty and build chatbot.")
     else:
         st.success("ChatBot Ready!")
-
-    st.write(fullRole) 
 
 # Display current  conversation history
 displayChat()
