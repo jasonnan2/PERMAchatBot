@@ -131,7 +131,7 @@ else:
    
     summary_text = parse_text_file(summary_path)
     binned_img = Image.open(binned_path)
-    binned_img.thumbnail((1500, 1500))  # resize for display
+    binned_img.thumbnail((5000, 5000))  # resize for display
 
     # Wider horizontal layout
     col1, col2 = st.columns([3, 2], gap="large")
@@ -142,5 +142,3 @@ else:
     with col2:
         # st.subheader("Technical Report")
         st.text_area("Technical Report", summary_text, height=650)
-
-
