@@ -5,6 +5,7 @@ import json
 from streamlit_modal import Modal
 from PIL import Image
 from natsort import natsorted
+Image.MAX_IMAGE_PIXELS = None  # disable limit
 
 # Use full screen width
 st.set_page_config(page_title="Participant Data Viewer", layout="wide")
