@@ -54,9 +54,9 @@ def parse_text_file(path):
 
 # Define folder paths
 CSV_DIR = "./dataForLLM/"
-SUMMARY_DIR = "./assignmentChatPromptOnlyIgnoreLowCorr/technicalSummary"
+SUMMARY_DIR = "./assignmentChatAddSatisfaction/technicalSummary"
 BINNED_DIR = "./BinnedFigures/"
-ASSIGNMENT_CSV = './assignmentChatPromptOnlyIgnoreLowCorr/'+'assignments.csv'
+ASSIGNMENT_CSV = './assignmentChatAddSatisfaction/'+'assignments.csv'
 
 # Helper function to get available names
 def get_names():
