@@ -54,7 +54,7 @@ def parse_text_file(path):
 
 # Define folder paths
 CSV_DIR = "./dataForLLM/"
-baseFolder = './assignmentChatSeperateSatisfaction_scalePenalty_ignoreDiet_talk2me/'
+baseFolder = './assignmentChatSeperateSatisfaction_scalePenalty_ignoreDiet_talk2me_addDietSatisfaction/'
 SUMMARY_DIR = baseFolder+'/technicalSummary'
 BINNED_DIR = "./BinnedFigures/"
 ASSIGNMENT_CSV = baseFolder+'assignments.csv'
