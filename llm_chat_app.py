@@ -8,8 +8,11 @@ import json
 import pandas as pd
 
 # Initialize Gemini client
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+@st.cache_resource
+def get_client():
+    return genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
+client = get_client()
 # Page configuration
 st.set_page_config(page_title="PERMA Coach Chatbot", page_icon="🤖")
 st.title("🤖 PERMA Coach Chatbot")
