@@ -12,6 +12,8 @@ from google.oauth2 import service_account
 @st.cache_resource
 def get_client():
     return genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+client = get_client()
+
 # Page configuration
 st.set_page_config(page_title="Assignment Chatbot", page_icon="🤖")
 st.title("BrainEBot")
