@@ -75,8 +75,6 @@ def init_session_state():
 
                 Stay professional, empathetic, and supportive throughout.
 
-                Respond in English and Chinese
-
             """
         ),
         "temperature": 0.2,
